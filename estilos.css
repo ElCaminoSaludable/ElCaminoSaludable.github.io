@@ -1,658 +1,593 @@
 /* ================================ */
-/* Estilos generales para todo el sitio */
+/* ESTILOS GENERALES - Configuración base para toda la página */
 /* ================================ */
-
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 23px;
-    line-height: 1.4;
-    background-color: #1583b3;
-    color: white;
-    display: flex;
-    flex-direction: column;
+    height: 100%;           /* Ocupa toda la altura de la ventana del navegador */
+    margin: 0;              /* Quita los márgenes que vienen por defecto */
+    padding: 0;             /* Quita los espacios internos que vienen por defecto */
+    font-family: Helvetica, Arial, sans-serif; /* Fuente principal, clara y fácil de leer */
+    font-size: 23px;        /* Tamaño del texto base */
+    line-height: 1.4;       /* Espacio entre renglones */
+    background-color: #1583b3; /* Fondo azul claro */
+    color: white;           /* Texto blanco como color principal */
+    display: flex;          /* Usa modelo flexible para organizar el contenido */
+    flex-direction: column; /* Ordena el contenido en forma de columna */
+    zoom: 72%;              /* Reduce el tamaño general del contenido (efecto visual) */
 }
 
 body {
-    flex: 1 0 auto;
+    flex: 1 0 auto;          /* Permite que el contenido principal crezca verticalmente */
 }
 
 main {
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 40px;
-    margin-top: 90px;
+    flex: 1 0 auto;          /* Hace que el contenido principal ocupe todo el espacio posible */
+    display: flex;           /* Modelo flexible para alinear elementos internos */
+    flex-direction: column; /* Ordena en columnas verticales */
+    padding: 20px 40px;      /* Espacio interior alrededor del contenido */
+    margin-top: 90px;        /* Deja espacio arriba para no tapar con el menú fijo */
 }
 
-
 /* ================================ */
-/* Menú de navegación (todas las páginas) */
+/* MENÚ DE NAVEGACIÓN - Barra superior fija con logo y enlaces */
 /* ================================ */
-
 .navegacion {
-    background-color: #000033;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 98.7%;
+    background-color: #000033; /* Azul muy oscuro para el fondo */
+    color: white;              /* Texto en blanco */
+    padding: 10px 20px;        /* Espacio interior arriba/abajo y a los lados */
+    display: flex;             /* Activa flexbox para alinear los elementos */
+    justify-content: space-between; /* Separa el logo de los enlaces */
+    align-items: center;       /* Centra verticalmente los elementos */
+    flex-wrap: wrap;           /* Permite que los elementos bajen de línea si es necesario */
+    position: fixed;           /* Lo deja fijo en la parte superior de la pantalla */
+    top: 0; left: 0;           /* Posición en la esquina superior izquierda */
+    width: 98.7%;              /* Casi todo el ancho de la pantalla */
 }
 
 .logo-titulo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 10px;
-    color: #00BFFF;
-    font-size: 1.8em;
-    transition: transform 0.3s ease;
+    display: flex;             /* Alinea logo y texto */
+    align-items: center;       /* Centra verticalmente */
+    text-decoration: none;     /* Quita el subrayado típico de los enlaces */
+    gap: 10px;                 /* Espacio entre el logo y el texto */
+    color: #00BFFF;            /* Color azul claro para el texto del título */
+    font-size: 1.8em;          /* Aumenta el tamaño del texto */
+    transition: transform 0.3s ease; /* Efecto de suavidad al pasar el mouse */
 }
 
 .logo-titulo:hover {
-    color: #ffffff;
-    transform: scale(1.1);
+    color: #ffffff;            /* Cambia a blanco al pasar el mouse */
+    transform: scale(1.1);     /* Agranda ligeramente el logo/texto */
 }
 
 .logo-img {
-    width: 60px;
-    height: auto;
+    width: 60px;               /* Ancho del logo */
+    height: auto;              /* Mantiene proporciones al ajustar el ancho */
 }
 
 .menu-derecho {
-    display: flex;
-    gap: 15px;
+    display: flex;             /* Organiza los íconos/enlaces en fila */
+    gap: 15px;                 /* Espacio entre cada uno */
 }
 
 .menu-derecho a {
-    text-decoration: none;
-    color: white;
-    display: inline-flex;
-    align-items: center;
-    transition: transform 0.3s, color 0.3s;
-    font-size: 1.1em;
-    cursor: pointer;
+    text-decoration: none;     /* Quita subrayado */
+    color: white;              /* Color blanco de texto */
+    display: inline-flex;      /* Los hace alinearse con íconos */
+    align-items: center;       /* Centra verticalmente */
+    transition: transform 0.3s, color 0.3s; /* Efectos al pasar el mouse */
+    font-size: 1.1em;          /* Tamaño del texto */
+    cursor: pointer;           /* Cambia el cursor a una mano */
 }
 
 .menu-derecho a:hover {
-    color: yellow;
-    transform: scale(1.1);
+    color: yellow;             /* Cambia el color al pasar el mouse */
+    transform: scale(1.1);     /* Agranda ligeramente */
 }
 
 .menu-derecho img {
-    width: 40px;
-    height: auto;
-    margin-right: 15px;
-    transition: transform 0.3s;
+    width: 40px;               /* Ancho de los íconos */
+    height: auto;              /* Proporciones automáticas */
+    margin-right: 15px;        /* Espacio entre ícono y texto */
+    transition: transform 0.3s; /* Efecto suave al pasar el mouse */
 }
 
 .menu-derecho a:hover img {
-    transform: scale(1.2);
+    transform: scale(1.2);     /* Agranda un poco el ícono */
 }
 
-
 /* ================================ */
-/* Pie de página común a todas las páginas */
+/* PIE DE PÁGINA - Barra inferior fija */
 /* ================================ */
-
 footer.pie {
-    flex-shrink: 0;
-    background-color: #000033;
-    color: white;
-    text-align: center;
-    padding: 2px 10px;
-    font-size: 1.1em;
-    user-select: none;
+    flex-shrink: 0;              /* Evita que se encoja */
+    background-color: #000033;   /* Fondo oscuro */
+    color: white;                /* Texto blanco */
+    text-align: center;          /* Centra el texto */
+    padding: 2px 10px;           /* Espacio mínimo alrededor */
+    font-size: 1.1em;            /* Tamaño de texto */
+    user-select: none;           /* No se puede seleccionar el texto */
 }
 
-
 /* ================================ */
-/* Página: index.html */
+/* PÁGINA INICIO - Estilos específicos para index.html */
 /* ================================ */
-
 .encabezado h1:nth-of-type(1) {
-    text-align: center;
-    font-size: 3.5em; 
-    margin: 15px 0;
-    color: yellow;
+    text-align: center;      /* Centra el texto */
+    font-size: 3.5em;        /* Muy grande */
+    margin: 15px 0;          /* Espacio arriba y abajo */
+    color: yellow;           /* Color amarillo para destacar */
 }
 
 .encabezado h1:nth-of-type(2) {
-    text-align: center;
-    font-size: 2.7em; 
-    color: white;
-    margin: 10px 0 30px;
+    text-align: center;      /* Centra el texto */
+    font-size: 2.7em;        /* Un poco más pequeño que el primero */
+    color: white;            /* Color blanco */
+    margin: 10px 0 30px;     /* Espaciado personalizado */
 }
 
 .secciones {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: nowrap;
+    display: flex;                /* Organiza en línea */
+    justify-content: space-between; /* Espacio igual entre secciones */
+    align-items: flex-start;     /* Alinea al inicio vertical */
+    gap: 30px;                   /* Espacio entre secciones */
+    flex-wrap: nowrap;           /* No se acomodan en varias filas */
 }
 
 .seccion {
-    flex: 1;
-    max-width: 33%;
-    text-align: center;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    flex: 1;                    /* Ocupa espacio igual */
+    max-width: 33%;             /* No pasa de un tercio del ancho */
+    text-align: center;         /* Centra el contenido */
+    cursor: pointer;            /* Muestra el cursor de mano */
+    transition: color 0.3s ease; /* Efecto suave al pasar el mouse */
 }
 
 .seccion h2 {
-    font-size: 2.4em; 
-    color: yellow;
-    margin-bottom: 15px;
-    transition: color 0.3s ease;
+    font-size: 2.4em;           /* Tamaño grande */
+    color: yellow;              /* Color amarillo */
+    margin-bottom: 15px;        /* Espacio debajo */
+    transition: color 0.3s ease; /* Cambio de color suave */
 }
 
 .seccion a {
-    display: flex;
+    display: flex;              /* Organiza en columna */
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    color: yellow;
+    gap: 15px;                  /* Espacio entre texto e imagen */
+    text-decoration: none;      /* Quita subrayado */
+    color: yellow;              /* Amarillo por defecto */
     transition: color 0.3s ease;
 }
 
 .imagen {
-    width: 100%;
-    max-width: 600px; 
-    height: auto;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
+    width: 100%;                /* Ocupa todo el contenedor */
+    max-width: 600px;           /* Límite máximo de ancho */
+    height: auto;               /* Ajuste automático */
+    border-radius: 12px;        /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Efecto de zoom */
 }
 
 .seccion:hover .imagen {
-    transform: scale(1.05);
+    transform: scale(1.05);     /* Aumenta tamaño al pasar el mouse */
 }
 
 .seccion:hover h2,
 .seccion:hover a {
-    color: #1a3e8d; 
-    transform: scale(1.03);
+    color: #1a3e8d;             /* Azul oscuro al pasar el mouse */
+    transform: scale(1.03);     /* Agranda ligeramente */
 }
 
 
 /* ================================ */
-/* Página: comida-chatarra.html */
+/* PÁGINA COMIDA CHATARRA - Estilos para comida-chatarra.html */
 /* ================================ */
-
 .contenido-chatarra h1 {
-    text-align: center;
-    color: yellow; 
-    font-size: 73px;
-    margin: 10px 10px 0px;
+    text-align: center;          /* Centra el texto principal */
+    color: yellow;               /* Texto en color amarillo para destacar */
+    font-size: 73px;             /* Tamaño muy grande para el título */
+    margin: 10px 10px 0px;       /* Márgenes: arriba 10px, lados 10px, abajo 0 */
 }
 
 .lista-consecuencias {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0 175px;
-    padding: 0 40px 50px;
-    margin: 0 auto;
-    max-width: 1100px;
+    display: grid;                          /* Organiza items en una cuadrícula */
+    grid-template-columns: repeat(3, 1fr);/* Divide en 3 columnas iguales */
+    gap: 0 175px;                          /* Espacio horizontal entre columnas */
+    padding: 0 40px 50px;                  /* Espacio interno: 0 arriba, 40px lados, 50px abajo */
+    max-width: 1100px;                     /* Limita ancho máximo para mejor lectura */
+    margin: 0 auto;                        /* Centra el bloque horizontalmente */
 }
 
 .lista-consecuencias li {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: white;
-    font-size: 32px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    text-align: center;        /* Centra el texto dentro de cada elemento */
+    font-weight: bold;         /* Texto en negrita para resaltar */
+    margin-bottom: 10px;       /* Espacio debajo de cada item */
+    color: white;              /* Texto blanco para contraste */
+    font-size: 32px;           /* Tamaño de texto grande para legibilidad */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves al cambiar */
 }
 
 .lista-consecuencias li img {
-    max-width: 110%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: none;
-    transition: transform 0.3s ease;
+    max-width: 110%;           /* Imagen puede sobresalir un poco */
+    height: auto;              /* Mantiene proporción original */
+    border-radius: 6px;        /* Bordes redondeados para suavizar */
+    box-shadow: none;          /* Sin sombra para la imagen */
+    transition: transform 0.3s ease; /* Animación suave para zoom */
 }
 
 .lista-consecuencias li:hover img {
-    transform: scale(1.17);
+    transform: scale(1.17);    /* Zoom en la imagen al pasar mouse */
 }
 
 .lista-consecuencias li:hover {
-    color: #1a3e8d;
-    transform: scale(1.08);
+    color: #1a3e8d;            /* Cambia color del texto a azul oscuro */
+    transform: scale(1.08);    /* Aumenta ligeramente el tamaño */
 }
 
-
 /* ================================ */
-/* Página: dieta.html */
+/* PÁGINA DIETA - Estilos para dieta.html */
 /* ================================ */
-
 .contenido-dieta h1 {
-    text-align: center;
-    color: yellow; 
-    font-size: 73px;
-    margin: 10px 20px 40px;
+    text-align: center;           /* Centra el título */
+    color: yellow;                /* Texto en amarillo */
+    font-size: 73px;              /* Tamaño grande para destacar */
+    margin: 10px 20px 40px;       /* Espacios arriba, lados y abajo */
 }
 
 .lista-dieta {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px 200px;
-    padding: 0 40px 50px;
-    margin: 0 auto;
-    max-width: 1100px;
-    row-gap: 80px;
+    display: grid;                /* Usa grid para distribuir items */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 40px 200px;              /* Espacio entre filas y columnas */
+    padding: 0 40px 50px;         /* Relleno interno con espacio abajo */
+    margin: 0 auto;               /* Centra horizontalmente */
+    max-width: 1100px;            /* Limita ancho máximo */
+    row-gap: 80px;                /* Separación vertical entre filas */
 }
 
 .lista-dieta li {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: white;
-    font-size: 32px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    text-align: center;           /* Texto centrado */
+    font-weight: bold;            /* Texto en negrita */
+    margin-bottom: 10px;          /* Espacio inferior */
+    color: white;                 /* Texto blanco */
+    font-size: 32px;              /* Texto grande para buena lectura */
+    transition: color 0.3s ease, transform 0.3s ease; /* Animaciones al hover */
 }
 
 .lista-dieta li img {
-    max-width: 165%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: none;
-    transition: transform 0.3s ease;
+    max-width: 165%;              /* Imagen más ancha que el contenedor */
+    height: auto;                 /* Proporción correcta de la imagen */
+    border-radius: 6px;           /* Bordes redondeados */
+    box-shadow: none;             /* Sin sombra */
+    transition: transform 0.3s ease; /* Animación de zoom */
 }
 
 .lista-dieta li:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1);        /* Zoom suave al pasar mouse */
 }
 
 .lista-dieta li:hover {
-    color: #1a3e8d;
-    transform: scale(1.08);
+    color: #1a3e8d;               /* Cambia texto a azul */
+    transform: scale(1.08);       /* Agranda ligeramente */
 }
 
-
 /* ================================ */
-/* Página: habitos.html */
+/* PÁGINA HÁBITOS - Estilos para habitos.html */
 /* ================================ */
-
 .contenido-habitos h1 {
-    text-align: center;
-    color: yellow;
-    font-size: 63px;
-    margin: 40px 0 20px;
+    text-align: center;         /* Centra título principal */
+    color: yellow;              /* Texto amarillo */
+    font-size: 63px;            /* Tamaño grande */
+    margin: 40px 0 20px;        /* Márgenes arriba y abajo */
 }
 
 .tabla-habitos {
-    width: 100%;
-    max-width: 900px;
-    margin: 20px auto 40px;
-    border-collapse: separate;
-    border-spacing: 0;
-    border: 2px solid white;
-    border-radius: 15px;
-    background-color: #002f6c;
-    color: white;
-    font-size: 1.05em;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 100%;                /* Tabla ocupa todo el ancho */
+    max-width: 900px;           /* Máximo ancho permitido */
+    margin: 20px auto 40px;     /* Centra y da espacio arriba y abajo */
+    border-collapse: separate; /* Bordes separados */
+    border-spacing: 0;          /* Sin espacio extra entre celdas */
+    border: 2px solid white;    /* Borde blanco visible */
+    border-radius: 15px;        /* Esquinas redondeadas */
+    background-color: #002f6c; /* Fondo azul oscuro */
+    color: white;               /* Texto blanco */
+    font-size: 1.05em;          /* Tamaño de fuente un poco más grande */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra suave */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animación suave */
 }
 
 .tabla-habitos:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Sombra más intensa al hover */
+    transform: scale(1.02);      /* Ligeramente más grande al pasar mouse */
 }
 
 .tabla-habitos td {
-    padding: 15px 25px;
-    border-bottom: 1px solid white;
-    text-align: left;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 15px 25px;          /* Espacio interno en celdas */
+    border-bottom: 1px solid white; /* Línea blanca debajo de cada fila */
+    text-align: left;            /* Texto alineado a la izquierda */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animación al hover */
 }
 
 .tabla-habitos tr:last-child td {
-    border-bottom: none;
+    border-bottom: none;         /* Quita línea en la última fila */
 }
 
 .tabla-habitos tr:hover td {
-    background-color: #0d58a3;
+    background-color: #0d58a3;  /* Fondo azul más claro al pasar mouse */
 }
 
 .tabla-habitos strong {
-    color: #FFD700;
-    font-weight: bold;
+    color: #FFD700;              /* Texto dorado para destacar */
+    font-weight: bold;           /* Negrita */
 }
 
 .contenido-habitos p {
-    font-size: 40px;
-    margin: 30px 0;
-    color: white;
-    text-align: center;
+    font-size: 40px;             /* Texto muy grande */
+    margin: 30px 0;              /* Espacio arriba y abajo */
+    color: white;                /* Texto blanco */
+    text-align: center;          /* Texto centrado */
 }
 
 .video-habitos {
-    display: flex;
-    justify-content: center;
-    margin: 30px auto;
+    display: flex;               /* Flexbox para centrar video */
+    justify-content: center;     /* Centra horizontalmente */
+    margin: 30px auto;           /* Espaciado arriba y abajo */
 }
 
 .video-habitos iframe {
-    width: 100%;
-    max-width: 600px;
-    aspect-ratio: 16 / 9;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    width: 100%;                 /* Ancho completo para responsividad */
+    max-width: 600px;            /* Máximo ancho del video */
+    aspect-ratio: 16 / 9;        /* Relación de aspecto estándar de video */
+    border: none;                /* Sin borde */
+    border-radius: 15px;         /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
 }
 
 .video-habitos iframe:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(3, 43, 153, 0.8);
+    transform: scale(1.03);      /* Zoom ligero al pasar mouse */
+    box-shadow: 0 0 20px rgba(3, 43, 153, 0.8); /* Sombra más intensa */
 }
 
-
 /* ================================ */
-/* Página: contacto.html */
+/* PÁGINA CONTACTO - Estilos para contacto.html */
 /* ================================ */
-
 .contenido-contacto {
-    max-width: 1000px;
-    margin: 60px auto 20px;
-    padding: 0 20px;
+    max-width: 1000px;           /* Máximo ancho del contenedor */
+    margin: 60px auto 20px;      /* Espacio arriba y abajo y centrado */
+    padding: 0 20px;             /* Espacio interno lateral */
 }
 
 .contenedor-formulario {
-    width: 170%;
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #00335b;
-    padding: 40px 50px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px #000;
-    color: white;
-    border: 2px solid black;
-    box-sizing: border-box;
+    width: 170%;                 /* Más ancho que el contenedor */
+    max-width: 600px;            /* Máximo ancho para formulario */
+    margin: 20px auto;           /* Centrado y espacio arriba y abajo */
+    background-color: #00335b;   /* Fondo azul oscuro */
+    padding: 40px 50px;          /* Espacio interno grande */
+    border-radius: 12px;         /* Bordes redondeados */
+    box-shadow: 0 0 15px #000;  /* Sombra negra alrededor */
+    color: white;                /* Texto blanco */
+    border: 2px solid black;     /* Borde negro */
+    box-sizing: border-box;      /* Incluye padding en el ancho */
 }
 
 .contenido-contacto h1 {
-    text-align: center;
-    color: yellow;
-    font-size: 65px;
+    text-align: center;          /* Título centrado */
+    color: yellow;               /* Texto amarillo */
+    font-size: 65px;             /* Tamaño grande */
 }
 
 .form-contacto label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-    text-align: left;
+    display: block;              /* Cada etiqueta ocupa línea completa */
+    margin-top: 15px;            /* Espacio arriba */
+    font-weight: bold;           /* Texto en negrita */
+    text-align: left;            /* Alineado a la izquierda */
 }
 
 .form-contacto input,
 .form-contacto textarea {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    margin-bottom: 10px;
-    background-color: #001f3f;
-    border: 2px solid white;
-    border-radius: 8px;
-    color: white;
-    font-size: 1em;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box;
+    display: block;              /* Ocupa línea completa */
+    width: 100%;                 /* Ancho completo del contenedor */
+    padding: 10px;               /* Espacio interno */
+    margin-top: 6px;             /* Espacio arriba */
+    margin-bottom: 10px;         /* Espacio abajo */
+    background-color: #001f3f;   /* Fondo azul muy oscuro */
+    border: 2px solid white;     /* Borde blanco */
+    border-radius: 8px;          /* Bordes redondeados */
+    color: white;                /* Texto blanco */
+    font-size: 1em;              /* Tamaño legible */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+    box-sizing: border-box;      /* Incluye padding en ancho */
 }
 
 .form-contacto input:focus,
 .form-contacto textarea:focus {
-    outline: none;
-    border-color: #ffcc00;
-    box-shadow: 0 0 8px #ffcc00;
+    outline: none;               /* Quita el contorno por defecto */
+    border-color: #ffcc00;       /* Borde amarillo cuando está activo */
+    box-shadow: 0 0 8px #ffcc00; /* Sombra amarilla al enfocar */
 }
 
 .form-contacto button {
-    background-color: #ffd700;
-    color: black;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    margin-top: 20px;
-    font-size: 1.05em;
+    background-color: #ffd700;   /* Fondo dorado */
+    color: black;                /* Texto negro */
+    border: none;                /* Sin borde */
+    padding: 12px;               /* Espacio interno */
+    border-radius: 8px;          /* Bordes redondeados */
+    font-weight: bold;           /* Texto negrita */
+    cursor: pointer;             /* Cambia cursor al pasar mouse */
+    transition: background-color 0.3s ease; /* Animación suave */
+    width: 100%;                 /* Botón ancho completo */
+    margin-top: 20px;            /* Espacio arriba */
+    font-size: 1.05em;           /* Tamaño del texto */
 }
 
 .form-contacto button:hover {
-    background-color: #e6b800;
+    background-color: #e6b800;   /* Dorado más oscuro al pasar mouse */
 }
 
 .bloque-redes {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #ffffff30;
-    text-align: center;
+    margin-top: 30px;            /* Espacio arriba */
+    padding-top: 20px;           /* Espacio interno arriba */
+    border-top: 1px solid #ffffff30; /* Línea superior translúcida */
+    text-align: center;          /* Centra el contenido */
 }
 
 .bloque-redes h2 {
-    margin-bottom: 15px;
-    font-size: 1.3em;
-    color: yellow;
+    margin-bottom: 15px;         /* Espacio abajo */
+    font-size: 1.3em;            /* Tamaño mediano */
+    color: #FFD700;              /* Color dorado */
 }
 
 .redes-sociales {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    list-style: none;            /* Quita puntos de lista */
+    padding-left: 0;             /* Quita padding izquierdo */
+    margin: 0;                   /* Quita márgenes */
+    display: flex;               /* Flexbox para alinear */
+    justify-content: center;     /* Centra horizontalmente */
+    gap: 40px;                   /* Espacio entre íconos */
 }
 
 .redes-sociales li a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 0.9em;
+    display: flex;               /* Flexbox para íconos y texto */
+    flex-direction: column;      /* Apila verticalmente */
+    align-items: center;         /* Centra horizontalmente */
+    text-decoration: none;       /* Sin subrayado */
+    color: white;                /* Texto blanco */
+    font-weight: bold;           /* Texto en negrita */
+    font-size: 0.9em;            /* Tamaño un poco pequeño */
 }
 
 .redes-sociales li a img {
-    width: 55px;
-    height: auto;
-    transition: transform 0.3s ease;
+    width: 55px;                 /* Tamaño fijo para iconos */
+    height: auto;                /* Proporción mantenida */
+    transition: transform 0.3s ease; /* Animación zoom */
 }
 
 .redes-sociales li a img:hover {
-    transform: scale(1.2);
+    transform: scale(1.2);       /* Aumenta tamaño al pasar mouse */
 }
 
-
 /* ================================ */
-/* Diseño responsivo */
+/* DISEÑO RESPONSIVE - Adaptaciones para móviles/tablets */
 /* ================================ */
-
 @media (max-width: 768px) {
+    /* Ajustes base para pantallas pequeñas */
     html, body {
-        font-size: 18px;
-        line-height: 1.4;
-        overflow-x: hidden;
+        font-size: 18px;         /* Reduce tamaño base de texto */
+        line-height: 1.4;        /* Mantiene buena lectura */
+        overflow-x: hidden;      /* Evita scroll horizontal */
     }
 
+    /* Barra de navegación móvil */
     .navegacion {
-        flex-direction: row;
-        align-items: center;
-        padding: 10px 15px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 70px; 
-        background-color: #000033;
-        z-index: 9999;
-        overflow-x: auto; 
-        overflow-y: hidden;
-        white-space: nowrap; 
+        flex-direction: row;     /* Elementos en una fila */
+        padding: 10px 15px;      /* Reduce espaciado */
+        height: 70px;            /* Altura fija */
+        width: 100%;             /* Ancho completo */
+        overflow-x: auto;        /* Permite scroll horizontal si es necesario */
+        white-space: nowrap;     /* No permite salto de línea */
     }
 
+    /* Logo en versión móvil */
     .logo-titulo {
-        font-size: 1.4em;
-        flex-shrink: 0;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #00BFFF;
-        text-decoration: none;
+        font-size: 1.4em;        /* Reduce tamaño texto */
+        flex-shrink: 0;          /* No se achica */
     }
 
     .logo-img {
-        width: 40px;
-        height: auto;
+        width: 40px;             /* Logo más pequeño */
     }
 
+    /* Menú derecho adaptado */
     .menu-derecho {
-        display: flex;
-        gap: 12px;
-        margin-left: 20px;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-right: 40px;
-        -webkit-overflow-scrolling: touch;
+        gap: 12px;               /* Menos espacio entre ítems */
+        padding-right: 40px;     /* Espacio para scroll */
     }
 
     .menu-derecho a {
-        font-size: 1em;
-        color: white;
-        display: inline-flex;
-        align-items: center;
-        white-space: nowrap;
-        text-decoration: none;
-        cursor: pointer;
-        transition: color 0.3s ease, transform 0.3s ease;
-        padding: 6px 8px;
-    }
-
-    .menu-derecho a:hover {
-        color: yellow;
-        transform: scale(1.05);
+        font-size: 1em;          /* Texto más pequeño */
+        padding: 6px 8px;        /* Espacio táctil */
     }
 
     .menu-derecho img {
-        width: 24px;
-        margin-right: 6px;
-        transition: transform 0.3s ease;
+        width: 24px;             /* Iconos más pequeños */
+        margin-right: 6px;       /* Menos margen */
     }
 
-    .menu-derecho a:hover img {
-        transform: scale(1.2);
-    }
-
+    /* Ajustes del contenido principal */
     main {
-        margin-top: 70px; 
-        padding: 15px;
+        margin-top: 70px;        /* Espacio para menú fijo */
+        padding: 15px;           /* Menos padding interno */
     }
 
+    /* Títulos responsive */
     .encabezado h1:nth-of-type(1),
     .encabezado h1:nth-of-type(2),
     .contenido-chatarra h1,
     .contenido-dieta h1,
     .contenido-habitos h1,
     .contenido-contacto h1 {
-        font-size: 30px;
-        margin: 40px 0;
-        text-align: center;
+        font-size: 30px;         /* Tamaño uniforme para móviles */
+        margin: 40px 0;          /* Espacio vertical */
     }
 
-   
+    /* Secciones en columna para móviles */
     .secciones {
-        flex-direction: column;
-        gap: 25px;
-        align-items: center;
+        flex-direction: column;  /* Apila verticalmente */
+        gap: 25px;               /* Espacio entre secciones */
     }
 
     .seccion {
-        max-width: 100%;
-        width: 100%;
+        max-width: 100%;         /* Ocupa todo el ancho */
+        width: 100%;             /* Forzar ancho completo */
     }
 
-    .imagen {
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-    }
-  
+    /* Listas en una columna */
     .lista-consecuencias,
     .lista-dieta {
-        grid-template-columns: 1fr !important;
-        gap: 30px;
-        padding: 0 10px 40px;
-        max-width: 100%;
+        grid-template-columns: 1fr !important; /* Una columna forzada */
+        gap: 30px;               /* Espacio vertical entre items */
+        padding: 0 10px 40px;    /* Menos padding lateral */
     }
 
     .lista-consecuencias li,
     .lista-dieta li {
-        font-size: 22px;
-        text-align: center;
+        font-size: 22px;         /* Texto legible en móvil */
     }
 
-    .lista-consecuencias li img,
-    .lista-dieta li img {
-        max-width: 100%;
-        height: auto;
-    }
-
+    /* Tabla responsive */
     .tabla-habitos {
-        width: 95%;
-        margin: 20px auto;
-        font-size: 1em;
+        width: 95%;              /* Casi todo el ancho */
+        font-size: 1em;          /* Texto un poco más pequeño */
     }
 
     .tabla-habitos td {
-        padding: 12px 15px;
+        padding: 12px 15px;      /* Menos espacio interno */
     }
 
+    /* Textos en móviles */
     .contenido-habitos p {
-        font-size: 28px;
-        margin: 20px 0;
-        text-align: center;
+        font-size: 28px;         /* Tamaño adecuado */
+        margin: 20px 0;          /* Espacio equilibrado */
     }
 
+    /* Video responsive */
     .video-habitos iframe {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
+        max-width: 100%;         /* Ancho total del contenedor */
     }
 
+    /* Formulario adaptado */
     .contenedor-formulario {
-        width: 100%;
-        padding: 20px;
-        margin: 20px auto;
-        box-sizing: border-box;
+        width: 100%;             /* Ancho completo */
+        padding: 20px;           /* Padding reducido */
     }
 
-    .form-contacto input,
-    .form-contacto textarea {
-        font-size: 1em;
-    }
-
+    /* Redes sociales en columna */
     .bloque-redes {
-        gap: 20px;
-        flex-direction: column;
+        gap: 20px;               /* Más espacio para interacción táctil */
+        flex-direction: column;  /* Apila verticalmente */
     }
 
+    /* Footer móvil */
     .pie {
-        font-size: 0.9em;
-        padding: 15px;
+        font-size: 0.9em;        /* Texto más compacto */
+        padding: 15px;           /* Más espacio para tocar */
     }
 }
+
