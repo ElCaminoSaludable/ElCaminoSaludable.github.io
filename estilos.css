@@ -189,7 +189,7 @@ footer.pie {
 
 .contenido-chatarra h1 {
     text-align: center;
-    color: #FFD700; 
+    color: yellow; 
     font-size: 73px;
     margin: 10px 10px 0px;
 }
@@ -236,7 +236,7 @@ footer.pie {
 
 .contenido-dieta h1 {
     text-align: center;
-    color: #FFD700; 
+    color: yellow; 
     font-size: 73px;
     margin: 10px 20px 40px;
 }
@@ -384,7 +384,7 @@ footer.pie {
 
 .contenido-contacto h1 {
     text-align: center;
-    color: #ffd700;
+    color: yellow;
     font-size: 65px;
 }
 
@@ -446,7 +446,7 @@ footer.pie {
 .bloque-redes h2 {
     margin-bottom: 15px;
     font-size: 1.3em;
-    color: #ffd700;
+    color: yellow;
 }
 
 .redes-sociales {
@@ -656,5 +656,3 @@ footer.pie {
         padding: 15px;
     }
 }
-
-
