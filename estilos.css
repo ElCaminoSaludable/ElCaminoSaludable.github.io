@@ -472,7 +472,7 @@ footer.pie {
         font-size: 18px;         /* Reduce tamaño base de texto */
         line-height: 1.4;        /* Mantiene buena lectura */
         overflow-x: hidden;      /* Evita scroll horizontal */
-        zoom: 90%;
+        zoom: 120%;
     }
 
     /* Barra de navegación móvil */
