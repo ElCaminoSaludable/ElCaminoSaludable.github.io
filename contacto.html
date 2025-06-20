@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Contacto</title>
+        <link rel="stylesheet" href="estilos.css" />
+    </head>
+    <body>
+
+        <!-- Menú de navegación con íconos y nombre -->
+        <nav class="navegacion">
+            <a href="index.html" class="logo-titulo"><img src="active-user.png" alt="Logo del sitio" class="logo-img"><strong>El Camino Saludable</strong></a> 
+            <div class="menu-derecho">
+                <a href="comida-chatarra.html"><img src="fast-food.png" alt="Ícono comida chatarra"> Comida Chatarra</a> | 
+                <a href="dieta.html"><img src="balanced-diet.png" alt="Ícono dieta"> Dieta</a> | 
+                <a href="habitos.html"><img src="heartbeat.png" alt="Ícono hábitos"> Hábitos</a> | 
+                <a href="contacto.html"><img src="telephone.png" alt="Ícono contacto"> Contacto</a>
+            </div>
+        </nav>
+
+        <!-- Contenido principal: formulario de contacto -->
+        <main class="contenido-contacto">
+            <h1>¿Cómo llevas una alimentación saludable? ¡Cuéntanos!</h1>
+
+            <div class="contenedor-formulario">
+
+                <!-- Formulario de contacto -->
+                <form action="#" method="post" class="form-contacto">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required /><br>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required /><br>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" cols="30" required></textarea><br>
+
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <!-- Redes sociales -->
+                <div class="bloque-redes">
+                    <h2>Nuestras redes</h2>
+                    <ul class="redes-sociales">
+                        <li>
+                            <a href="https://www.instagram.com/elcaminosaludable_web?utm_source=qr&igsh=MTdhb2p6cDdubWk5Yw==" target="_blank" rel="noopener noreferrer"><img src="social.png" alt="Instagram" /></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="pie">
+            <p>© 2025 El Camino Saludable — Tu ruta hacia un estilo de vida equilibrado.</p>
+        </footer>
+
+    </body>
+</html>

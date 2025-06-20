@@ -1,0 +1,660 @@
+/* ================================ */
+/* Estilos generales para todo el sitio */
+/* ================================ */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 23px;
+    line-height: 1.4;
+    background-color: #1583b3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1 0 auto;
+}
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    margin-top: 90px;
+}
+
+
+/* ================================ */
+/* Menú de navegación (todas las páginas) */
+/* ================================ */
+
+.navegacion {
+    background-color: #000033;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98.7%;
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    color: #00BFFF;
+    font-size: 1.8em;
+    transition: transform 0.3s ease;
+}
+
+.logo-titulo:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+}
+
+.menu-derecho {
+    display: flex;
+    gap: 15px;
+}
+
+.menu-derecho a {
+    text-decoration: none;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s, color 0.3s;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.menu-derecho a:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+
+.menu-derecho img {
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+    transition: transform 0.3s;
+}
+
+.menu-derecho a:hover img {
+    transform: scale(1.2);
+}
+
+
+/* ================================ */
+/* Pie de página común a todas las páginas */
+/* ================================ */
+
+footer.pie {
+    flex-shrink: 0;
+    background-color: #000033;
+    color: white;
+    text-align: center;
+    padding: 2px 10px;
+    font-size: 1.1em;
+    user-select: none;
+}
+
+
+/* ================================ */
+/* Página: index.html */
+/* ================================ */
+
+.encabezado h1:nth-of-type(1) {
+    text-align: center;
+    font-size: 3.5em; 
+    margin: 15px 0;
+    color: yellow;
+}
+
+.encabezado h1:nth-of-type(2) {
+    text-align: center;
+    font-size: 2.7em; 
+    color: white;
+    margin: 10px 0 30px;
+}
+
+.secciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: nowrap;
+}
+
+.seccion {
+    flex: 1;
+    max-width: 33%;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.seccion h2 {
+    font-size: 2.4em; 
+    color: yellow;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.seccion a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: yellow;
+    transition: color 0.3s ease;
+}
+
+.imagen {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.seccion:hover .imagen {
+    transform: scale(1.05);
+}
+
+.seccion:hover h2,
+.seccion:hover a {
+    color: #1a3e8d; 
+    transform: scale(1.03);
+}
+
+
+/* ================================ */
+/* Página: comida-chatarra.html */
+/* ================================ */
+
+.contenido-chatarra h1 {
+    text-align: center;
+    color: #FFD700; 
+    font-size: 73px;
+    margin: 10px 10px 0px;
+}
+
+.lista-consecuencias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 175px;
+    padding: 0 40px 50px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.lista-consecuencias li {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 32px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.lista-consecuencias li img {
+    max-width: 110%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+.lista-consecuencias li:hover img {
+    transform: scale(1.17);
+}
+
+.lista-consecuencias li:hover {
+    color: #1a3e8d;
+    transform: scale(1.08);
+}
+
+
+/* ================================ */
+/* Página: dieta.html */
+/* ================================ */
+
+.contenido-dieta h1 {
+    text-align: center;
+    color: #FFD700; 
+    font-size: 73px;
+    margin: 10px 20px 40px;
+}
+
+.lista-dieta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 200px;
+    padding: 0 40px 50px;
+    margin: 0 auto;
+    max-width: 1100px;
+    row-gap: 80px;
+}
+
+.lista-dieta li {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 32px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.lista-dieta li img {
+    max-width: 165%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+}
+
+.lista-dieta li:hover img {
+    transform: scale(1.1);
+}
+
+.lista-dieta li:hover {
+    color: #1a3e8d;
+    transform: scale(1.08);
+}
+
+
+/* ================================ */
+/* Página: habitos.html */
+/* ================================ */
+
+.contenido-habitos h1 {
+    text-align: center;
+    color: yellow;
+    font-size: 63px;
+    margin: 40px 0 20px;
+}
+
+.tabla-habitos {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto 40px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: #002f6c;
+    color: white;
+    font-size: 1.05em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.tabla-habitos:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    transform: scale(1.02);
+}
+
+.tabla-habitos td {
+    padding: 15px 25px;
+    border-bottom: 1px solid white;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tabla-habitos tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-habitos tr:hover td {
+    background-color: #0d58a3;
+}
+
+.tabla-habitos strong {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.contenido-habitos p {
+    font-size: 40px;
+    margin: 30px 0;
+    color: white;
+    text-align: center;
+}
+
+.video-habitos {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.video-habitos iframe {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.video-habitos iframe:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(3, 43, 153, 0.8);
+}
+
+
+/* ================================ */
+/* Página: contacto.html */
+/* ================================ */
+
+.contenido-contacto {
+    max-width: 1000px;
+    margin: 60px auto 20px;
+    padding: 0 20px;
+}
+
+.contenedor-formulario {
+    width: 170%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #00335b;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #000;
+    color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.contenido-contacto h1 {
+    text-align: center;
+    color: #ffd700;
+    font-size: 65px;
+}
+
+.form-contacto label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    background-color: #001f3f;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+    outline: none;
+    border-color: #ffcc00;
+    box-shadow: 0 0 8px #ffcc00;
+}
+
+.form-contacto button {
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 1.05em;
+}
+
+.form-contacto button:hover {
+    background-color: #e6b800;
+}
+
+.bloque-redes {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff30;
+    text-align: center;
+}
+
+.bloque-redes h2 {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: #ffd700;
+}
+
+.redes-sociales {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.redes-sociales li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.redes-sociales li a img {
+    width: 55px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.redes-sociales li a img:hover {
+    transform: scale(1.2);
+}
+
+
+/* ================================ */
+/* Diseño responsivo */
+/* ================================ */
+
+@media (max-width: 768px) {
+    html, body {
+        font-size: 18px;
+        line-height: 1.4;
+        overflow-x: hidden;
+    }
+
+    .navegacion {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 15px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px; 
+        background-color: #000033;
+        z-index: 9999;
+        overflow-x: auto; 
+        overflow-y: hidden;
+        white-space: nowrap; 
+    }
+
+    .logo-titulo {
+        font-size: 1.4em;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #00BFFF;
+        text-decoration: none;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: auto;
+    }
+
+    .menu-derecho {
+        display: flex;
+        gap: 12px;
+        margin-left: 20px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-right: 40px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .menu-derecho a {
+        font-size: 1em;
+        color: white;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 0.3s ease, transform 0.3s ease;
+        padding: 6px 8px;
+    }
+
+    .menu-derecho a:hover {
+        color: yellow;
+        transform: scale(1.05);
+    }
+
+    .menu-derecho img {
+        width: 24px;
+        margin-right: 6px;
+        transition: transform 0.3s ease;
+    }
+
+    .menu-derecho a:hover img {
+        transform: scale(1.2);
+    }
+
+    main {
+        margin-top: 70px; 
+        padding: 15px;
+    }
+
+    .encabezado h1:nth-of-type(1),
+    .encabezado h1:nth-of-type(2),
+    .contenido-chatarra h1,
+    .contenido-dieta h1,
+    .contenido-habitos h1,
+    .contenido-contacto h1 {
+        font-size: 30px;
+        margin: 40px 0;
+        text-align: center;
+    }
+
+   
+    .secciones {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .seccion {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .imagen {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+  
+    .lista-consecuencias,
+    .lista-dieta {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+        padding: 0 10px 40px;
+        max-width: 100%;
+    }
+
+    .lista-consecuencias li,
+    .lista-dieta li {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .lista-consecuencias li img,
+    .lista-dieta li img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .tabla-habitos {
+        width: 95%;
+        margin: 20px auto;
+        font-size: 1em;
+    }
+
+    .tabla-habitos td {
+        padding: 12px 15px;
+    }
+
+    .contenido-habitos p {
+        font-size: 28px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .video-habitos iframe {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .contenedor-formulario {
+        width: 100%;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: border-box;
+    }
+
+    .form-contacto input,
+    .form-contacto textarea {
+        font-size: 1em;
+    }
+
+    .bloque-redes {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .pie {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+}
+
+
